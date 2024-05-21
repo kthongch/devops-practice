@@ -15,7 +15,7 @@ jobs:
       run: |
         echo "<!DOCTYPE html><html><body><h1>Hello, World!</h1></body></html>" > index.html
         echo "FROM nginx:alpine" > Dockerfile
-        echo "COPY index.html /usr/share/nginx/html/index.html" > Dockerfile
+        echo "COPY index.html /usr/share/nginx/html/index.html" >> Dockerfile
         docker build -t ${{ github.repository }}:latest .
         docker images
         
