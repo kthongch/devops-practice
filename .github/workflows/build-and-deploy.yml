@@ -24,3 +24,6 @@ jobs:
       
     - name: Push Docker Image to GitHub Container Registry
       run: docker push ghcr.io/${{ github.repository }}:latest
+
+    - name: Remove Docker Image
+      run: docker rmi  ghcr.io/${{ github.repository }}:latest
