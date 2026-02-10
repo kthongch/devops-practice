@@ -1,0 +1,15 @@
+name: List Files in Repository
+
+on:
+  workflow_dispatch:
+
+jobs:
+  checkout-and-list-files:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+    - name: List Files
+      run: ls -alR
